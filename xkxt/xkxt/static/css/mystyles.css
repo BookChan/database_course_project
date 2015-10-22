@@ -1,0 +1,14 @@
+
+.nav-head{
+    min-height: 200px;
+    background-color: #337AB7;
+}
+
+.login-form{
+    min-height: 100px;
+    padding-top: 60px;
+
+}
+.row-footer{
+    padding-top:60px;
+}
