@@ -1,0 +1,98 @@
+{%extends "base_site.html"%}
+
+
+{%block pagecontent%}
+<section class="container table-custom">
+<ol class="breadcrumb">
+  <li><a href="main.html">选课首页</a></li>
+  <li class="active">已选课程</li>
+</ol>
+
+
+<div class="table-responsive">
+           <table class="table table-condensed" id="course-table">
+          <thead>
+            <tr>
+              <th>选择</th>
+              <th>课程号</th>
+              <th>课程名</th>
+              <th>学分</th>
+              <th>授课老师</th>
+              <th>上课时间</th>
+              <th>上课地点</th>
+              <th>班容量</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="TR1">
+              <td><input type="checkbox" onclick="checktr(this,TR1)"></td>
+              <td>001</td>
+              <td>思想道德修养与法律基础</td>
+              <td>3</td>
+              <td><a href="">张三</a></td>
+              <td>周二 17：00-19：00</td>
+              <td>思贤楼1102</td>
+              <td>30</td>
+              <td>88</td>
+            </tr>
+            <tr id="TR2">
+              <td><input type="checkbox" onclick="checktr(this,TR2)"></td>
+              <td>002</td>
+              <td>体育(一) </td>
+              <td>2</td>
+              <td><a href="">李四</a></td>
+              <td>周三 15：00-17：00</td>
+              <td>北操场</td>
+              <td>60</td>
+              <td>88</td>
+            </tr>
+            <tr id="TR3">
+              <td><input type="checkbox" onclick="checktr(this,TR3)"></td>
+              <td>003</td>
+              <td>机器人</td>
+              <td>4.5</td>
+              <td><a href="">王五</a></td>
+              <td>周六 8：00-10：00</td>
+              <td>工程实验中心</td>
+              <td>120</td>
+              <td>88</td>
+            </tr>
+             <tr id="TR4">
+              <td><input type="checkbox" onclick="checktr(this,TR4)"></td>
+              <td>001</td>
+              <td>思想道德修养与法律基础</td>
+              <td>3</td>
+              <td><a href="">张三</a></td>
+              <td>周二 17：00-19：00</td>
+              <td>思贤楼1102</td>
+              <td>30</td>
+              <td>88</td>
+            </tr>
+            <tr id="TR5">
+              <td><input type="checkbox" onclick="checktr(this,TR5)"></td>
+              <td>002</td>
+              <td>体育(一) </td>
+              <td>2</td>
+              <td><a href="">李四</a></td>
+              <td>周三 15：00-17：00</td>
+              <td>北操场</td>
+              <td>60</td>
+              <td>88</td>
+            </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+      <hr />
+      <div class="pull-right">
+        <button type="button" class="btn btn-primary btn-custom" value="confirm">确 认</button>
+        <button type="button" class="btn btn-primary btn-custom" onclick="window.location.reload()">取 消</button>
+      </div>
+    </section>
+
+
+
+
+{%endblock%}

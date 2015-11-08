@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>研究生选课系统-中山大学</title>
+    <link rel="icon" href="static/img/favicon.ico" type="image/x-icon" />
+
+    <link href="static/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="static/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/css/mystyles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+<div class="container nav-head">
+<div class="row">
+<div class="col-md-4">
+<img src="static/img/school_logo.png" height="108" width="410" border="0">
+</div>
+</div>
+<div class="row" style="padding-left: 20px">
+<h2>研究生选课管理系统</h2>
+
+</div>
+
+</div>
+
+</header>
+
+<div class="row  login-form">
+<div class="col-md-offset-4 col-md-6">
+<form class="form-horizontal" method="post" action="/" role="login">
+  <div class="form-group">
+  {% csrf_token %}
+    <label for="stid"  class="col-sm-2 control-label">账号</label>
+       <div class="col-sm-5">
+      <input type="text" id="stid" name="stid" class="form-control" placeholder="studentid">
+      </div>
+</div>
+    <div class="form-group">
+    <label for="stid"  class="col-sm-2 control-label">密码</label>
+    <div class="col-sm-5">
+       <input type="password" id="password" name="password" class="form-control" placeholder="password">
+       </div>
+    </div>
+    <div class="form-group">
+    <label   class="col-sm-2 control-label"></label>
+    <div class="input-group">
+                  <div class="input-group-addon" style="padding:0px">
+                    <img src="static/img/getcha.gif"  class="img-thumbnail" alt="" width="80px" height="40px">
+                  </div>
+    <div class=" col-sm-5">
+    <input id="captchaId" class="form-control" type="text" name="captcha" placeholder=" 输入左侧验证码" required="">
+    </div>
+    </div>
+    </div>
+    <div class="form-group">
+    <label   class="col-sm-2 control-label"></label>
+     <div class="col-sm-5">
+    <button type="submit" class="btn btn-success">登陆</button>
+    <label for="rememberme"  class="control-label">记住我</label>
+        <input  type="checkbox" id="rememberme" name="rememberme">
+
+    </div>
+  </div>
+
+
+</form>
+</div>
+</div>
+
+
+<div class="container notice">
+
+</div>
+
+<footer>
+<div class="row row-footer">
+<p align="center">
+本系统为研究生服务，提供选课相关功能</br>
+联系我们<i class="fa fa-envelope"></i>:
+<a href="mailto:confusion@food.net">zhshuq@gmail.com</a>
+</address>
+</p>
+
+</div>
+</footer>
+
+
+
+<!-- javascript-->
+<script type="static/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+</body>

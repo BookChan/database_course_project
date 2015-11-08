@@ -1,4 +1,5 @@
-xkxt/xkxt/static/bower_components/
+xkxt/static/bower_components/
+data/
 # Byte-compiled / optimized / DLL files
 
 __pycache__/

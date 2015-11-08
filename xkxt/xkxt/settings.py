@@ -1,4 +1,5 @@
-# Django settings for xkxt project.
+#coding=utf8
+
 import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -11,10 +12,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'djangodb',                      # Or path to database file if using sqlite3.
-        'USER': 'djangodb',                      # Not used with sqlite3.
-        'PASSWORD': 'djangodb',                  # Not used with sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'xkxt.slt3.db',                      # Or path to database file if using sqlite3.
+        'USER': '',                      # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -66,10 +67,12 @@ STATIC_ROOT = ''
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
+
+BASE_DIR = "/home/bookchan/workspace/database_course_project/xkxt/"
 # Additional locations of static files
 STATICFILES_DIRS = (
 
-     os.path.dirname(os.path.abspath(__file__))+"/static",
+     BASE_DIR+"/static",
 
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
@@ -100,6 +103,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -110,7 +114,7 @@ ROOT_URLCONF = 'xkxt.urls'
 WSGI_APPLICATION = 'xkxt.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.dirname(os.path.abspath(__file__))+"/static/templates",
+       BASE_DIR+"/templates",
       # os.path.join(os.path.dirname(os.path.abspath(__file__)), "/static/templates")
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
@@ -124,10 +128,15 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'django_admin_bootstrapped',
+    'django.contrib.admin',
+    'django.contrib.flatpages',
+     "xkxt",
+    "xkxt.course",
+    "xkxt.student",
+     "xkxt.teacher",
+    "xkxt.organization",
+    "xkxt.verification",
 )
 
 # A sample logging configuration. The only tangible logging

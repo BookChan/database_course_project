@@ -1,0 +1,11 @@
+{% extends "admin/base.html" %}
+{% load i18n %}{% load admin_static bootstrapped_goodies_tags %}
+{% load trans2cn%}
+{% block title %}{% render_with_template_if_exist "admin/admin_title.html" title %} | {{ site_title|default:_('选课管理系统') }}{% endblock %}
+
+{% block branding %}
+<a class="navbar-brand" href="{% url 'admin:index' %}">
+{% if site_header %}{{ site_header }}{% else %}{% render_with_template_if_exist "admin/admin_title.html" _('选课管理系统') %}{% endif %}</a>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

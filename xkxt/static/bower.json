@@ -1,0 +1,23 @@
+{
+  "name": "xkxt",
+  "homepage": "https://github.com/BookChan/database_course_project",
+  "description": "a website for student to select course",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "bookchan"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0"
+  }
+}

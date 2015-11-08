@@ -1,0 +1,21 @@
+　{%extends "base.html"%}
+
+　{%block content%}
+  <div class="container">
+      <form class="form-signin" role="form" method="post" action="" >
+            {% csrf_token %}
+        <h2 class="form-signin-heading">中山大学研究生选课系统</h2>
+        {% if loginerror %}
+        <h3> 账号或密码错误</h3>
+        {% endif %}
+        <input id="username"  name="username"  type="text" class="form-control" placeholder="请输入学号（工号）" required autofocus>
+        <input  id="password" name="password" type="password" class="form-control" placeholder="请输入密码" required>
+        <label class="checkbox">
+          <input type="checkbox" name="rememberme"  value="remember-me"> 记住我
+        </label>
+        <button type="submit" id="submit" class="btn-lg btn-primary btn-block"> 登 录</button>
+      </form>
+ </div>
+
+
+{%endblock%}
